@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="options-box">
+        <h1>Tuscaloosa County Apairies</h1>
+        <div>
+          <input id="show-listings" type="button" value="Show Apairies">
+          <input id="hide-listings" type="button" value="Hide Apairies">
+        </div>
+        <div>
+          <ul>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+          </ul>
+        </div>
+      </div>
+      <!--<div id="map"></div>-->
+    </div>
+    <div id="map"></div>
+    <script type='text/javascript' src='js/map.js'></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkV7z3H902_Zl_Ryz6JK4W6qJTIderjE8&callback=initMap"
+    async defer></script>
+  </body>
+</html>
