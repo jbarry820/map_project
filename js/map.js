@@ -15,7 +15,9 @@ function initMap() {
 	window.handle_apiary_data = function(data) {	  
 	  var markers = [];
 	  var arr = []
-	  $.each(data, function(i, h) {	       
+	  for (var i=0; i<data.length; i++)
+	  {
+	    var h = data[i];	       
 	    var a = ko.mapping.fromJS(h);
 	    arr.push(a);
 	    
@@ -23,7 +25,7 @@ function initMap() {
 	    var latLng = new google.maps.LatLng(h.latitude, h.longitude);
 	    var marker = new google.maps.Marker({ position: latLng, map: map });
 	    markers.push(marker);
-	  });	  
+	  };
 	  var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });	  
 	  ko.applyBindings({ apiaries: arr });        
   };
