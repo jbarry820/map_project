@@ -8,47 +8,42 @@
   </head>
   <body>
     <div class="container">
-      <div class="options-box">
-        <h1>Tuscaloosa County Apairies</h1>
-        <div>
-          <input id="show-listings" type="button" value="Show Apairies">
-          <input id="hide-listings" type="button" value="Hide Apairies">
+        <div class="options-box">
+          <h1>Tuscaloosa County Apairies</h1>
+          <div>
+            <input id="show-apiaries" type="button" value="Show Apiaries">
+            <input id="hide-apiaries" type="button" value="Hide Apiaries">
+          </div>
+          <div>
+            <!-- This was added to show the list of apiaries-->
+            <table>
+              <thead>
+                <tr>
+                  <th>Field Name</th>
+                </tr>
+              </thead>
+              <tbody data-bind="foreach: apiaries">
+                <tr>
+                  <td data-bind="text: fieldName, click: $parent.setApiary"></td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <ul class="modal-list" data-bind="'foreach': apiaries">
+              <li class="filterItem" data-bind="'text': fieldName,
+                  css: { 'filterItemSelect': fieldName === apiaries.currentSelected() },
+                  'click': apiaries.selectItem">
+              </li>
+            </ul> -->
+          </div>
         </div>
-        <div>
-        
-          <!-- This was added to show the list of apiaries -->
-          <table>
-            <thead>
-              <tr>                
-                <th>Type  </th>
-                <th>Lat   </th>
-                <th>Long  </th>
-                <th>Field </th>
-                <th>Owner </th>    
-              </tr>
-            </thead>
-            <tbody data-bind="foreach: apiaries">
-              <tr>                
-                <td data-bind="text: type"></td>
-                <td data-bind="text: latitude"></td>
-                <td data-bind="text: longitude"></td>
-                <td data-bind="text: fieldName"></td>
-                <td data-bind="text: owner"></td>
-              </tr>
-            </tbody>
-          </table>
-          <!------------------------------------------------->
-          
-        </div>
-      </div>
-      <!--<div id="map"></div>-->
+      <div id="map"></div>
     </div>
-    <div id="map"></div>     
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script type='text/javascript' src="js/knockout.js"></script>
     <script type='text/javascript' src="js/knockout.mapping.js"></script>
     <script type='text/javascript' src='js/map.js'></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkV7z3H902_Zl_Ryz6JK4W6qJTIderjE8&callback=initMap" async defer></script>
+  <!--<script type='text/javascript' src='js/sidebar.js'></script>-->
   </body>
 </html>

@@ -1,12 +1,12 @@
 handle_apiary_data([
-  {         
+  {
     "type":"Apairy",
     "latitude":33.165388,
     "longitude":-87.739671,
     "fieldName":"Long North",
     "owner":"Jim Barry"
   },
-  
+
   {
     "type":"Apairy",
     "latitude":33.162907,
@@ -67,7 +67,7 @@ handle_apiary_data([
     "type":"Apairy",
     "latitude":33.051425,
     "longitude":-87.715746,
-    "fieldName":"Home SfieldNamee",
+    "fieldName":"Home Side Field",
     "owner":"Jim Barry"
   },
   {
